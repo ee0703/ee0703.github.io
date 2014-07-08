@@ -2,8 +2,8 @@
 <!--  导航条   -->
 <div class="pure-menu pure-menu-open pure-menu-horizontal">
 	<ul>
-		<li {% if page.active == 'index' %} class="pure-menu-selected" {%endif%}>
-			<a href="/">主页</a>
+		<li {% if (page.active == 'index') or page.active == nil  %} class="pure-menu-selected" {%endif%}>
+			<a href="/">博客</a>
 		</li >
 		<li {% if page.active == 'tech' %} class="pure-menu-selected" {%endif%}>
 			<a href="/tech">Tech</a>

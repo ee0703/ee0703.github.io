@@ -17,32 +17,36 @@
 	<div style="width:980px;margin:30px auto;">
 			<div class="pure-g">
 				
-				<!--  标题   -->
-				<div class="pure-u-1-1 header-container" style="">
-					{%include header_bar.html%}
-				</div>
-				
-				<!--  导航条   -->
- 				<div class="pure-u-1-1" style="font-weight: bold;">
-					{%include nav.html%}
-				</div> 
-				
 				<!--  日志列表主界面   -->
 				<div class="pure-u-3-4">
+					<h1>{{page.title}}</h1>
+					<hr style="border:1px dashed #CCC; height:1px">
 					<div class="post-container">
 						　　　　{{ content }}
 					</div>
+					<hr style="border: 1px solid #CCC"/>
+					<p class="post-meta">
+						<i class="fa fa-pencil"></i>&nbsp;&nbsp;By 
+						<span class="post-author">
+							{%if page.author %}
+								{%if page.author != "" && page.author != nil && page.author!= '' %}
+									{{ page.author }}
+								{% endif %}
+							{% else %}
+								{{ site.global_author }}
+							{% endif  %}
+						</span>
+						&nbsp;{{ page.date | date: "%Y-%m-%d" }}
+					</p>
+					{%include duoshuo.html%}
 				</div>
 				
 				<!--  侧边栏   -->
-<!-- 				<div class="pure-u-1-4 sidebar-container">
-					<div class="sidebar-block-container">
-						
+				<div class="pure-u-1-4 sidebar-container">
+					<div class="right-title-bar">
+						<h1 class="right-title-bar-title"><a href="/"><i class="fa fa-home"></i>EE の博客</a></h1>
 					</div>
-					<div class="sidebar-block-container">
-					
-					</div>
-				</div> -->
+				</div>
 				
 				<!--  Footer   -->
 				<div class="pure-u-1-1 footer">

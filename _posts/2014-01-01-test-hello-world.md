@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "it works!碉堡了"
 categories: jekyll update
 ---

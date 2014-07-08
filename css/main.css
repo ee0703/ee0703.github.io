@@ -84,6 +84,8 @@ background:none;
 }
 
 .footer{
+	font-family:arial !important;
+	color:#555;
 	border-top:5px solid #CCC;
 	margin:12px 0;
 }
@@ -131,4 +133,15 @@ background:none;
 .sidebar-block-container{
 	border:1px #ccc solid;
 	margin-bottom:12px;
+}
+
+.right-title-bar{
+	text-align: right;
+}
+
+.right-title-bar-title{
+	font-size: 34px;
+	font-weight: bold;
+	color:#5541F9;
+	font-family: trebuchet ms, arial, helvetica, tahoma, verdana;
 }
