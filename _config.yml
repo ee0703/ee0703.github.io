@@ -1,0 +1,6 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+pygments: true
+permalink: /blog/:year/:title/
+site_title:	'[EEの博客]'
+global_author: 'EE'

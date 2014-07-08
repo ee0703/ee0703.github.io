@@ -1,1 +1,29 @@
-Hello World
+---
+layout: default
+title: ""
+root: "../"
+active: index
+---
+
+{% for post in site.posts %}
+	<div class="post-article-container">
+		<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<p class="post-meta">
+			By 
+			<span class="post-author">
+				{%if post.author %}
+					{%if post.author != "" && post.author != nil && post.author!= '' %}
+						{{ post.author }}
+					{% endif %}
+				{% else %}
+					{{ site.global_author }}
+				{% endif  %}
+			</span>
+			&nbsp;{{ post.date | date: "%Y-%m-%d" }}
+		</p>
+		<div class="post-content">
+				{{ post.excerpt }}
+		</div>
+	</div>
+
+ {% endfor %}

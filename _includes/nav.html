@@ -1,0 +1,18 @@
+
+<!--  导航条   -->
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+	<ul>
+		<li {% if page.active == 'index' %} class="pure-menu-selected" {%endif%}>
+			<a href="/">主页</a>
+		</li >
+		<li {% if page.active == 'tech' %} class="pure-menu-selected" {%endif%}>
+			<a href="/tech">Tech</a>
+		</li>
+		<li {% if page.active == 'fun' %} class="pure-menu-selected" {%endif%}>
+			<a href="/fun">Fun</a>
+		</li>
+		<li {% if page.active == 'about' %} class="pure-menu-selected" {%endif%}>
+			<a href="/about">About</a>
+		</li>
+	</ul>
+</div>

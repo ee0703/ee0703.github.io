@@ -1,0 +1,134 @@
+/* main css of the site */
+
+.button-xsmall {
+	font-size: 70%;
+}
+
+.button-small {
+	font-size: 85%;
+}
+
+.button-large {
+	font-size: 110%;
+}
+
+.button-xlarge {
+	font-size: 125%;
+}
+
+.post-container{
+	padding: 0px 60px 0px 0px;
+}
+
+.post-article-container{
+	margin:24px 0px 24px 0px;
+	padding:0px 0px 6px 0px;
+	background: #F0F0FE;
+}
+
+.post-title{
+	font-size: 26px;
+	font-weight: bold;
+	color:#000;
+	font-family: trebuchet ms, arial, helvetica, tahoma, verdana;
+	border-left:5px solid #CCC;
+	padding:3px 10px;
+	margin:8px 0;
+}
+
+.post-content{
+	margin:0;
+	padding:0px 6px;
+	font-size:18px;
+}
+
+.header-title{
+	font-size: 52px;
+	font-weight: bold;
+	color:#5541F9;
+	font-family: trebuchet ms, arial, helvetica, tahoma, verdana;
+}
+
+.header-title a{
+	text-decoration:none;
+	color:#5541F9;
+}
+
+.header-title a:hover{
+	color:#CC41F9;
+}
+.pure-menu a {
+	color: #AAA;
+	border-bottom:5px solid #EEE;
+}
+
+.pure-menu .pure-menu-selected a {
+color: #FFA500;
+border-bottom:5px solid #999;
+}
+
+.pure-menu li a:hover, .pure-menu li a:focus {
+color: #FFA500;
+border-bottom:5px solid #BBB;
+background:none;
+}
+
+.header-container{
+	position:relative;
+}
+
+.header-search-bar{
+	position:absolute;
+	right:8px;
+	top:50px;
+}
+
+.footer{
+	border-top:5px solid #CCC;
+	margin:12px 0;
+}
+
+.sidebar-title
+{
+	padding:0 8px;
+	font-size: 20px;
+	font-weight:bold;
+	border-left:5px solid #CCC;
+	color:#CCC;
+	font-family: trebuchet ms, arial, helvetica, tahoma, verdana;
+	margin:0 0 8px 0;
+	background:#EEE;
+}
+
+.sidebar-container a
+{
+	color: #37F;
+	text-decoration: none;
+}
+
+.sidebar-container a:hover
+{
+	color: #fff;
+	text-decoration: none;
+	background: #37F;
+}
+
+.post-meta {
+	color: #999;
+	font-size: 80%;
+	margin: 0;
+}
+
+.post-author{
+	color:#09F;
+}
+
+.sidebar-more{
+	text-align:right;
+	padding:0 24px;
+}
+
+.sidebar-block-container{
+	border:1px #ccc solid;
+	margin-bottom:12px;
+}
