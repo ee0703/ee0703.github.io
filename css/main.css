@@ -136,7 +136,13 @@ background:none;
 }
 
 .right-title-bar{
-	text-align: right;
+	position:fixed;
+	top:0%;
+}
+
+.right-title-bar-container{
+	float:right;
+	width:210px;
 }
 
 .right-title-bar-title{
@@ -144,4 +150,5 @@ background:none;
 	font-weight: bold;
 	color:#5541F9;
 	font-family: trebuchet ms, arial, helvetica, tahoma, verdana;
+	padding:12px 0;
 }

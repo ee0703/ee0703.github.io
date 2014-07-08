@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "it works!碉堡了"
-categories: jekyll update
+categories: 测试 helloworld
 ---
 
 hello world！
