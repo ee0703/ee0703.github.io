@@ -1,0 +1,12 @@
+
+<!--  标签侧边栏   -->
+<p class="sidebar-title">
+	<span style="color:#0A6;">所有标签<i class="fa fa-tag"></i></span>
+</p>
+<div>
+		  <ul>
+		   	{% for cat in site.categories %}
+				<li><a href="/">{{ cat[0] }}({{ cat | last | size }})</a></li>
+			{% endfor %}
+		  </ul>
+</div>

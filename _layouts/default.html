@@ -7,6 +7,7 @@
 	<link href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" rel="stylesheet" type="text/css" />
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+	<script src="/js/tagcanvas.min.js"></script>
 	{%if page.high_light_on %}
 		<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 		<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/atelier-dune.dark.min.css" rel="stylesheet">
@@ -30,19 +31,16 @@
 				<!--  日志列表主界面   -->
 				<div class="pure-u-3-4">
 					<div class="post-container">
-						　　　　{{ content }}
+						{{ content }}
 					</div>
 				</div>
 				
 				<!--  侧边栏   -->
-<!-- 				<div class="pure-u-1-4 sidebar-container">
+				<div class="pure-u-1-4 sidebar-container">
 					<div class="sidebar-block-container">
-						
+						{% include sidebar_tags.html %}
 					</div>
-					<div class="sidebar-block-container">
-					
-					</div>
-				</div> -->
+				</div>
 				
 				<!--  Footer   -->
 				<div class="pure-u-1-1 footer">

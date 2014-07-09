@@ -12,6 +12,9 @@
 		<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/atelier-dune.dark.min.css" rel="stylesheet">
 		<script>hljs.initHighlightingOnLoad();</script>
 	{% endif %}
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
  </head>
  <body>
 	<div style="width:980px;margin:30px auto;">
@@ -46,8 +49,19 @@
 					<div class="right-title-bar-container">
 						<div class="right-title-bar">
 							<h1 class="right-title-bar-title"><a href="/"><i class="fa fa-home"></i>EE の博客</a></h1>
+							<div class="right-title-bar-search-bar">
+								<form class="pure-form">
+									<fieldset>
+										<input placeholder="关键词" type="text"/>
+										<a class="r-btn-search pure-button pure-button-primary">
+											<i class="fa fa-search"></i>	
+										</a>
+									</fieldset>
+								</form>
+							</div>
 						</div>
 					</div>
+					
 				</div>
 				
 				<!--  Footer   -->

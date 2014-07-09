@@ -102,9 +102,9 @@ background:none;
 	background:#EEE;
 }
 
+
 .sidebar-container a
 {
-	color: #37F;
 	text-decoration: none;
 }
 
@@ -151,4 +151,17 @@ background:none;
 	color:#5541F9;
 	font-family: trebuchet ms, arial, helvetica, tahoma, verdana;
 	padding:12px 0;
+}
+
+.right-title-bar-title  a{
+	color:#5541F9;
+}
+
+right-title-bar-search-bar .input[type="text"] {
+    width: 240px;
+    padding-right: 50px;
+}
+
+.r-btn-search {
+    margin-left: -56px;
 }
