@@ -22,7 +22,7 @@ hide_title: true
 项目 / Projects : * 待添加
 
 
-联系 / Contact : [github](https://github.com/ee0703/)  /  [twiter](https://twitter.com/maxee0703)  /  [豆瓣](http://www.douban.com/people/ee_the_sage/)   
+联系 / Contact : [github](https://github.com/ee0703/)  /  [twiter](https://twitter.com/maxee0703)  /  [facebook](https://www.facebook.com/xiaoquan.forever)  /  [知乎](http://www.zhihu.com/people/peng-quan-xin)  /  [豆瓣](http://www.douban.com/people/ee_the_sage/)   
 
 
 ![desk](/images/CIMG2798.JPG)
