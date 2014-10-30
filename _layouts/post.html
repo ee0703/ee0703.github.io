@@ -1,74 +1,37 @@
-<!DOCTYPE HTML>
-<html>
- <head>
-	<title>{%if page.title != "" && page.title!=nil && page.title!= '' %}{{ page.title }}-{% endif %}{{site.site_title}}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" rel="stylesheet" type="text/css" />
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="/css/main.css" rel="stylesheet" type="text/css" />
-	{%if page.high_light_on %}
-		<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-		<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/atelier-dune.dark.min.css" rel="stylesheet">
-		<script>hljs.initHighlightingOnLoad();</script>
-	{% endif %}
-	<!--[if IE 7]>
-	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
-	<![endif]-->
- </head>
- <body>
-	<div style="width:980px;margin:30px auto;">
-			<div class="pure-g">
-				
-				<!--  日志列表主界面   -->
-				<div class="pure-u-3-4">
-					<h1>{{page.title}}</h1>
-					<hr style="border:1px dashed #CCC; height:1px">
-					<div class="post-container">
-						　　　　{{ content }}
-					</div>
-					<hr style="border: 1px solid #CCC"/>
-					<p class="post-meta">
-						<i class="fa fa-pencil"></i>&nbsp;&nbsp;By 
-						<span class="post-author">
-							{%if page.author %}
-								{%if page.author != "" && page.author != nil && page.author!= '' %}
-									{{ page.author }}
-								{% endif %}
-							{% else %}
-								{{ site.global_author }}
-							{% endif  %}
-						</span>
-						&nbsp;{{ page.date | date: "%Y-%m-%d" }}
-					</p>
-					{%include duoshuo.html%}
-				</div>
-				
-				<!--  侧边栏   -->
-				<div class="pure-u-1-4 sidebar-container">
-					<div class="right-title-bar-container">
-						<div class="right-title-bar">
-							<h1 class="right-title-bar-title"><a href="/"><i class="fa fa-home"></i>EE の博客</a></h1>
-							<div class="right-title-bar-search-bar">
-								<form class="pure-form">
-									<fieldset>
-										<input placeholder="关键词" type="text"/>
-										<a class="r-btn-search pure-button pure-button-primary">
-											<i class="fa fa-search"></i>	
-										</a>
-									</fieldset>
-								</form>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-				<!--  Footer   -->
-				<div class="pure-u-1-1 footer">
-					{%include footer.html%}
-				</div>
-			</div>
-	</div>
- </body>
-</html>
+---
+layout: default
+---
+
+{% assign minutes = content | number_of_words | divided_by: 180 %}
+{% if minutes == 0 %}
+{% assign minutes = 1 %}
+{% endif %}
+
+<div class="post-header mb2">
+  <h1 class="py2">{{ page.title }}</h1>
+  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span><br>
+  {% if page.update_date %}
+    <span class="post-meta">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span><br>
+  {% endif %}
+  <span class="post-meta small">{{ minutes }} minute read</span>
+</div>
+
+<article class="post-content">
+  {{ content }}
+</article>
+
+{% if site.show_post_footers %}
+  {% include post_footer.html %}
+{% endif %}
+
+{% if site.show_related_posts %}
+  <h3 class="related-post-title">Related Posts</h3>
+  {% for post in site.related_posts %}
+    <div class="post ml2">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+        <h4 class="post-title">{{ post.title }}</h4>
+        <p class="post-summary">{{ post.summary }}</p>
+      </a>
+    </div>
+  {% endfor %}
+{% endif %}

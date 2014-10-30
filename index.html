@@ -1,29 +1,21 @@
 ---
 layout: default
-title: ""
-root: "../"
-active: index
+no_duoshuo: true
 ---
 
-{% for post in site.posts %}
-	<div class="post-article-container">
-		<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		<p class="post-meta">
-			By 
-			<span class="post-author">
-				{%if post.author %}
-					{%if post.author != "" && post.author != nil && post.author!= '' %}
-						{{ post.author }}
-					{% endif %}
-				{% else %}
-					{{ site.global_author }}
-				{% endif  %}
-			</span>
-			&nbsp;{{ post.date | date: "%Y-%m-%d" }}
-		</p>
-		<div class="post-content">
-				{{ post.excerpt }}
-		</div>
-	</div>
+<div class="home">
 
- {% endfor %}
+  <div class="posts">
+    {% for post in paginator.posts %}
+      <div class="post">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+          <p class="post-meta">{{ post.date | date: "%m 月 %d日, %Y" }}</p>
+          <h3 class="h2 post-title">{{ post.title }}</h3>
+          <p class="post-summary">{{ post.summary }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include pagination.html %}
+</div>
