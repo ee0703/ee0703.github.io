@@ -38,7 +38,7 @@ pixyll的汉化版，主要改动如下:
 $ gem install jekyll
 {% endhighlight %}
 
-#### Verify your Jekyll version
+#### 确认 Jekyll版本
 
 确认你的Jekyll版本，因为Pixyll只支持 [Jekyll 2.0 以上版本](http://jekyllrb.com/news/2014/05/06/jekyll-turns-2-0-0/).
 
@@ -72,7 +72,7 @@ paginate: 3
 {% endhighlight %} 
 
 ### 多说评论和百度统计(可选)
-配置多说，和百度统计，如果不需要评论和统计功能，你可以跳过此步
+配置'多说'和'百度统计'，如果不需要评论和统计功能，你可以跳过此步
 你需要先注册多说和百度统计账号，然后将相应id填入配置文件即可
 特别注意，百度统计请使用异步js代码
 ![百度统计](https://raw.githubusercontent.com/ee0703/pixyll-zh-cn/master/images/bdtjcfg.jpg)
