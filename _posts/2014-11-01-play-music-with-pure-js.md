@@ -2,8 +2,12 @@
 layout: post
 title:  使用纯JS播放音乐
 date:   2014-11-01
-summary: 教你如何使用Web audio API来播放音符，用纯js写一个简单的播放器
+summary: 教你如何使用Web audio API，并用纯js来写一个简单的音符播放器
 ---
+
+本文示例页面:[http://blog.maxee.info/simplesheetmusic/example_cn.html](http://blog.maxee.info/simplesheetmusic/example_cn.html)  
+
+源代码见[Github:ee0703/SimpleSheetMusic.js](https://github.com/ee0703/SimpleSheetMusic.js)
 
 ### 先看看原理 ###
 先看维基百科的定义：  
@@ -11,24 +15,24 @@ summary: 教你如何使用Web audio API来播放音符，用纯js写一个简�
 >声音是通过物体振动产生的声波。是通过介质（空气或固体、液体）传播并能被人或动物听觉器官所感知的波动现象。
 >声音的频率一般会以赫兹表示，记为Hz，指每秒钟周期性变化的次数。而分贝是用来表示声音强度的单位，记为dB。
 
-HTML5带有Web Audio API，你可以使用AudioContext来创造声波，**webkit&firefox**内核浏览器都是支持的，但万恶的IE好像并不支持。
+HTML5带有Web Audio API，你可以使用AudioContext来创造声波, **webkit&firefox**内核浏览器都是支持的，但万恶的IE好像并不支持。
 
 ### Hello World ###
 现在让我们来写我们的 Hello World：
 {% highlight javascript %}
-	/*  创建AudioContext对象,
-		firefox => AudioContext, 
-		webkit => webkitAudioContext
-	*/
-    var context = new (window.AudioContext || window.webkitAudioContext)();
+/*  创建AudioContext对象,
+	firefox => AudioContext, 
+	webkit => webkitAudioContext
+*/
+var context = new (window.AudioContext||window.webkitAudioContext)();
 
-	//创建波形合成器
-	oscillator = context.createOscillator();
+//创建波形合成器
+oscillator = context.createOscillator();
 
-	//连接硬件
-	oscillator.connect(context.destination);
-	//开始播放声音
-	oscillator.start(0); 
+//连接硬件
+oscillator.connect(context.destination);
+//开始播放声音
+oscillator.start(0); 
 {% endhighlight %}
 
 把上面这段代码存成"music.js"，嵌入HTML中，用Chrome或Firefox试试。Very good，现在我们终于可以发音了，但是一直持续一个音符，非常很难听，简直就是噪音啊
@@ -37,32 +41,32 @@ HTML5带有Web Audio API，你可以使用AudioContext来创造声波，**webkit
 **旋律**，就是**音高**的变化，音高，其实就是 **频率**，国际上，以中音'la'(也就是A4)的音高440HZ作为标准音。Allright，我们现在只要改变声波的频率，就能播放旋律了!让我们来修改代码:
 
 {% highlight javascript %}
-	//AudioContext对象,firefox => AudioContext, webkit => webkitAudioContext
-    var context = new (window.AudioContext || window.webkitAudioContext)();
-	//创建波形合成器
-	oscillator = context.createOscillator();
+//AudioContext对象
+var context = new (window.AudioContext||window.webkitAudioContext)();
+//创建波形合成器
+oscillator = context.createOscillator();
 
-	//连接硬件
-	oscillator.connect(context.destination);
-	//开始播放声音
-	oscillator.start(0); 
-	
-	//每隔500毫秒改变一次音高
-	var t1 = setInterval(function(){
-			//产生一个0~1800的随机频率(hz)
-	  		oscillator.frequency.value = (Math.random() *  1800)  
-		},
-	500);
+//连接硬件
+oscillator.connect(context.destination);
+//开始播放声音
+oscillator.start(0); 
+
+//每隔500毫秒改变一次音高
+var t1 = setInterval(function(){
+	//产生一个0~1800的随机频率(hz)
+  	oscillator.frequency.value = (Math.random() *  1800)  
+},
+500);
 {% endhighlight %}
 
 下面是国际标准音高频率对照表（单位为hz）：
 
 {% highlight javascript %}
-	/**
-	 * Equal Temperament Tuning
-	 * Source: http://www.phy.mtu.edu/~suits/notefreqs.html
-	 */
-	var tune_table = {
+/**
+ * Equal Temperament Tuning
+ * Source: http://www.phy.mtu.edu/~suits/notefreqs.html
+ */
+var tune_table = {
     'C0': 16.35,
     'C#0': 17.32,
     'Db0': 17.32,
@@ -217,7 +221,7 @@ HTML5带有Web Audio API，你可以使用AudioContext来创造声波，**webkit
 	
 {% highlight javascript %}
 //创建oscillator
-var context = new (window.AudioContext || window.webkitAudioContext)(),
+var context = new (window.AudioContext||window.webkitAudioContext)(),
 oscillator = context.createOscillator();
 oscillator.connect(context.destination);
 oscillator.start(0);
