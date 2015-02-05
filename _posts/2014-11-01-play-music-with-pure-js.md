@@ -5,7 +5,7 @@ date:   2014-11-01
 summary: 教你如何使用Web audio API，并用纯js来写一个简单的音符播放器
 ---
 
-本文示例页面:[http://blog.maxee.info/simplesheetmusic/example_cn.html](http://blog.maxee.info/simplesheetmusic/example_cn.html)  
+本文示例页面:[http://pqx.ee/simplesheetmusic/example_cn.html](http://pqx.ee/simplesheetmusic/example_cn.html)  
 
 源代码见[Github:ee0703/SimpleSheetMusic.js](https://github.com/ee0703/SimpleSheetMusic.js)
 
