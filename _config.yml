@@ -1,10 +1,10 @@
 # Site settings
-title:       EE's Blog   ／   Python&Web
+title:       EE's Blog   ／  Never Stop Learning  
 email:       xiaoquan.vip@gmail.com 
 author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+description: "EE's Blog,focused on python & web!"
 baseurl:     ""
-url:         "http://blog.maxee.info"
+url:         "http://pqx.ee/"
 
 #Duoshuo short Name
 duoshuo: blog-maxee
@@ -22,8 +22,8 @@ show_post_footers:  false
 
 # Social icons
 show_social_icons: false
-github_username:
-twitter_username:
+github_username: ee0703
+twitter_username: maxee0703
 google_plus_id:
 linkedin_username:
 bitcoin_url:
