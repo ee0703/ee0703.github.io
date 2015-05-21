@@ -13,7 +13,7 @@ hide_title: true
     '生日': '1990-07-03',
     '邮箱': 'xiaoquan.vip[at]gmail.com',
     '教育': '北京工业大学，计算机系，研究生在读',
-    '技能': ['Python', 'PHP', 'Web前端', 'C', 'Scheme'],
+    '技能': ['Python', 'Ruby', 'PHP', 'Web前端', 'C', 'Scheme'],
     '爱好': ['素描', '古典音乐', '动漫', '长跑']
 }
 {% endhighlight %}
