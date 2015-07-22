@@ -64,7 +64,7 @@ def application(env, start_response):
 uwsgi --http :8000 --wsgi-file test.py
 ```
 
-参数中，http :8000表示使用http协议，端口号为8000，wigi-file则表示要运行的wsgi应用程序文件。uwsgi运行后打开浏览器，访问http://127.0.0.1:8000/，或者是相应服务器地址的8000端口，就可以看到hello world 页面了。  
+参数中，http :8000表示使用http协议，端口号为8000，wigi-file则表示要运行的wsgi应用程序文件。uwsgi运行后打开浏览器，访问http://127.0.0.1:8000/ ，或者是相应服务器地址的8000端口，就可以看到hello world 页面了。  
 
 上面的例子中,我们用浏览器直接访问了uwsgi运行的python程序(只有一个入口函数的wsgi测试应用test.py)，其访问结构如下所示。
 ```
@@ -226,7 +226,7 @@ systemctl stop emperor.uwsgi.service
 linux系统中，还有一种通用的方法，就是在init.d 或 rc.d 中加入启动脚本，这种方式不够智能，而且网上资料很多，在这里暂不讨论。
 
 ## 7 常用参数和选项
-关于参数的具体使用，可以阅读官方文档http://uwsgi-docs.readthedocs.org/en/latest/Options.html，在这里列出一些常用的参数：
+关于参数的具体使用，可以阅读官方文档http://uwsgi-docs.readthedocs.org/en/latest/Options.html ，在这里列出一些常用的参数：
 
 - chdir         项目目录
 - home          virtualenv目录（如没有运行virtualenv虚拟环境，则无需设置）
