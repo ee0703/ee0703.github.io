@@ -192,7 +192,7 @@ uwsgi --emperor /etc/uwsgi/vassals
 - 如果监控进程（皇帝）死了，所有服务（诸侯）都会停止
 
 ###  用systemd管理uwsgi服务
-配合Eperor模式，在centos、fedora、archlinux中，我们可以用systemd来管理uwsgi，首先，创建一个systemd service文件（/etc/systemd/system/uwsgi.service）
+配合Eperor模式，在centos、fedora、archlinux中，我们可以用systemd来管理uwsgi，首先，创建一个systemd service文件（/etc/systemd/system/emperor.uwsgi.service）
 ```
 [Unit]
 Description=uWSGI Emperor
